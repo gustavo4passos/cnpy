@@ -35,12 +35,12 @@ namespace cnpy {
 
         template<typename T>
         T* data() {
-            return reinterpret_cast<T*>(&(*data_holder)[0]);
+            return reinterpret_cast<T*>((*data_holder).data());
         }
 
         template<typename T>
         const T* data() const {
-            return reinterpret_cast<T*>(&(*data_holder)[0]);
+            return reinterpret_cast<T*>((*data_holder).data());
         }
 
         template<typename T>
